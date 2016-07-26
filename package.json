@@ -1,6 +1,8 @@
 {
-  "name": "",
-  "version": "0.1.0",
+  "name": "styleguide",
+  "version": "1.0.0",
+  "description": "A living style guide for Discord application development.",
+  "main": "webpack.config.babel.js",
   "dependencies": {
     "react": "15.1.0",
     "react-dom": "15.1.0",
@@ -12,24 +14,42 @@
     "babel-preset-es2015": "6.9.0",
     "babel-preset-react": "6.5.0",
     "babel-preset-react-hmre": "1.1.1",
-    "babel-preset-stage-0": "6.5.0",
     "css-loader": "0.23.1",
     "eslint": "3.0.0",
     "eslint-loader": "1.4.0",
     "eslint-plugin-react": "5.1.1",
+    "file-loader": "^0.9.0",
+    "postcss-browser-reporter": "0.5.0",
+    "postcss-color-function": "^2.0.1",
+    "postcss-cssnext": "2.7.0",
+    "postcss-import": "8.1.2",
     "postcss-loader": "0.9.1",
+    "postcss-reporter": "1.4.1",
+    "postcss-short-size": "1.1.0",
+    "postcss-url": "5.1.2",
     "rimraf": "2.5.2",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "1.14.1",
+    "webpack-notifier": "1.3.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --hot --inline --progress",
+    "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production webpack -p",
     "postbuild": "npm run copy",
     "clean": "rimraf build",
     "copy": "cp -r public/* build"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammerandchisel/StyleGuide.git"
+  },
+  "author": "Discord, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hammerandchisel/StyleGuide/issues"
+  },
+  "homepage": "https://github.com/hammerandchisel/StyleGuide#readme"
 }
